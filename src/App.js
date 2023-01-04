@@ -3,6 +3,10 @@ import './App.css';
 import logo from "./logo.png"
 import resume from "./Eng_William.pdf"
 
+
+const aboutPage = "/about";
+const homePage = "/work";
+
 function App() {
   return (
     <div className="App">
@@ -16,14 +20,24 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
   }
+  handleWorkClick(event) {
+    event.preventDefault();
+    window.scrollTo(0, 0);
+  }
+
+  handleLogoClick(event) {
+    event.preventDefault();
+  }
   render() {
     return(
-      <div className='navbar'>
-        <div><img src={logo} className="logo" alt='Eng-William-Logo' ></img></div>
-        <button type="button">Work</button>
-        <button type='button'>About</button>
-        <a href={resume} target="_blank">Resume</a>
-      </div>
+      <nav>
+        <ul>
+          <li><a className="logo" href={homePage}><img src={logo} alt='Eng-William-Logo'/></a></li>
+          <li><a className="links" href={homePage}>Work</a></li>
+          <li><a className="links" href={aboutPage}>About</a></li>
+          <li><a className="links" href={resume} target="_blank">Resume</a></li>
+        </ul>
+      </nav>
     );
   }
 };

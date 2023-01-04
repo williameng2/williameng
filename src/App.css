@@ -1,26 +1,41 @@
-*{
-  padding: 0;
-  margin: 0;
+nav {
+  background-color: white;
 }
 
-.navbar {
-  display: inline;
-  padding: auto;
-  background-color: white;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  padding-left: 20px;
+}
+
+.links {
+  justify-content: flex-end;
 }
 
 .logo {
-  width: 100px;
-  height: 50px;
-  object-fit: contain;
-  float: inline-start;
+  justify-items: flex-start;
 }
 
-button {
-  border: none;
-  padding: auto;
-  height: max-content;
-  background-color: white;
-  font-size: 12px;
-  float: inline-end;
+img {
+  height: 50px;
+  width: auto;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #7F846D;
 }
